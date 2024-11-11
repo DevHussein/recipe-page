@@ -3,10 +3,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body {
-  -webkit-font-smoothing: antialiased;
-}
-
 @font-face {
   font-family: "Outfit";
   src: url("/assets/fonts/outfit/static/Outfit-Thin.ttf") format("truetype");
