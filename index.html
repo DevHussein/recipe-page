@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              rose: {
+                50: "#FFF7FB",
+                800: "#7A284E",
+              },
+              stone: {
+                900: "#312E2C",
+                600: "#5F564D",
+                150: "#E3DDD7",
+                100: "#F3E5D7",
+              },
+              brown: {
+                800: "#854632",
+              },
+              white: "#FFFFFF",
+            },
+            fontFamily: {
+              sans: ["Outfit", "sans-serif"],
+              serif: ["YoungSerif", "serif"],
+            },
+            fontSize: {
+              "text-preset-1-web": [
+                "40px",
+                {
+                  lineHeight: "100%",
+                  letterSpacing: "0px",
+                },
+              ],
+              "text-preset-1-mobile": [
+                "36px",
+                {
+                  lineHeight: "100%",
+                  letterSpacing: "0px",
+                },
+              ],
+              "text-preset-2": [
+                "28px",
+                {
+                  lineHeight: "100%",
+                  letterSpacing: "0px",
+                },
+              ],
+              "text-preset-3": [
+                "20px",
+                {
+                  lineHeight: "100%",
+                  letterSpacing: "0px",
+                },
+              ],
+              "text-preset-4": [
+                "16px",
+                {
+                  lineHeight: "150%",
+                  letterSpacing: "0px",
+                },
+              ],
+              "text-preset-4-bold": [
+                "16px",
+                {
+                  lineHeight: "150%",
+                  letterSpacing: "0px",
+                },
+              ],
+            },
+            spacing: {
+              1600: "128px",
+              600: "48px",
+              500: "40px",
+              400: "32px",
+              300: "24px",
+              200: "16px",
+              150: "12px",
+              100: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Recipe page</title>
+  </head>
+  <body
+    class="min-h-screen bg-stone-100 flex flex-col items-center justify-center font-serif md:mx-[76px] md:my-[128px] lg:mx-[352px]"
+  >
+    <main
+      class="flex flex-col bg-white gap-y-400 md:gap-y-500 items-center md:p-500 md:rounded-3xl w-full md:w-[616px] lg:w-[736px]"
+    >
+      <picture class="w-full sm:w-auto">
+        <!-- Mobile image -->
+        <source
+          media="(max-width: 640px)"
+          srcset="assets/images/mobile-omelette.png"
+        />
+
+        <!-- Tablet image -->
+        <source
+          media="(min-width: 641px) and (max-width: 1023px)"
+          srcset="assets/images/tablet-omelette.png"
+        />
+
+        <!-- Desktop image -->
+        <source
+          media="(min-width: 1024px)"
+          srcset="assets/images/desktop-omelette.png"
+        />
+
+        <!-- Default image for desktop -->
+        <img
+          src="assets/images/desktop-omelette.png"
+          alt="Omelette on a plate"
+          class="w-full h-auto"
+        />
+      </picture>
+
+      <section class="flex flex-col p-400 md:p-0 items-start gap-y-300">
+        <h1
+          class="text-text-preset-1-mobile md:text-text-preset-1-web text-stone-900 font-normal"
+        >
+          Simple Omelette Recipe
+        </h1>
+        <p class="text-text-preset-4 text-[#5F564D] font-sans">
+          An easy and quick dish, perfect for any meal. This classic omelette
+          combines beaten eggs cooked to perfection, optionally filled with your
+          choice of cheese, vegetables, or meats.
+        </p>
+        <section
+          class="flex flex-col bg-rose-50 gap-y-200 w-full p-300 rounded-xl"
+        >
+          <h1 class="text-rose-800 font-sans font-semibold text-text-preset-3">
+            Preparation time
+          </h1>
+          <ul
+            class="list-disc marker:text-rose-800 marker:font-light font-sans ml-1 text-stone-600 text-text-preset-4 font-light"
+          >
+            <li class="ml-4 pl-3">
+              <span class="font-bold">Total:</span> Approximately 10 minutes
+            </li>
+            <li class="ml-4 pl-3">
+              <span class="font-bold">Preparation:</span> 5 minutes
+            </li>
+            <li class="ml-4 pl-3">
+              <span class="font-bold">Cooking:</span> 5 minutes
+            </li>
+          </ul>
+        </section>
+        <section class="flex flex-col gap-y-300">
+          <h1 class="text-[28/16rem] text-brown-800">Ingredients</h1>
+          <section>
+            <ul
+              class="list-disc text-text-preset-4 text-stone-600 font-sans marker:text-rose-800 marker:font-light ml-1"
+            >
+              <li class="ml-4 pl-3">2-3 large eggs</li>
+              <li class="ml-4 pl-3">Salt, to taste</li>
+              <li class="ml-4 pl-3">Pepper, to taste</li>
+              <li class="ml-4 pl-3">1 tablespoon of butter or oil</li>
+              <li class="ml-4 pl-3">
+                Optional fillings: cheese, diced vegetables, cooked meats, herbs
+              </li>
+            </ul>
+          </section>
+        </section>
+        <div class="border-t border-stone-150 w-full"></div>
+        <section class="flex flex-col gap-y-6">
+          <h1 class="text-[28px] text-brown-800">Instructions</h1>
+          <section>
+            <ol
+              class="flex flex-col gap-y-100 ml-1 list-decimal text-text-preset-4 font-sans font-light text-stone-600 marker:text-brown-800 marker:font-bold"
+            >
+              <li class="ml-4 pl-3">
+                <span class="font-bold">Beat the eggs:</span> In a bowl, beat
+                the eggs with a pinch of salt and pepper until they are well
+                mixed. You can add a tablespoon of water or milk for a fluffier
+                texture.
+              </li>
+              <li class="ml-4 pl-3">
+                <span class="font-bold">Heat the pan:</span> Place a non-stick
+                frying pan over medium heat and add butter or oil.
+              </li>
+              <li class="ml-4 pl-3">
+                <span class="font-bold">Cook the omelette:</span> Once the
+                butter is melted and bubbling, pour in the eggs. Tilt the pan to
+                ensure the eggs evenly coat the surface.
+              </li>
+              <li class="ml-4 pl-3">
+                <span class="font-bold">Add fillings (optional):</span> When the
+                eggs begin to set at the edges but are still slightly runny in
+                the middle, sprinkle your chosen fillings over one half of the
+                omelette.
+              </li>
+              <li class="ml-4 pl-3">
+                <span class="font-bold">Fold and serve:</span> As the omelette
+                continues to cook, carefully lift one edge and fold it over the
+                fillings. Let it cook for another minute, then slide it onto a
+                plate.
+              </li>
+              <li class="ml-4 pl-3">
+                <span class="font-bold">Enjoy:</span> Serve hot, with additional
+                salt and pepper if needed.
+              </li>
+            </ol>
+          </section>
+        </section>
+        <div class="border-t border-stone-150 w-full"></div>
+        <section class="flex flex-col gap-y-300">
+          <h1 class="text-[28px] text-brown-800">Nutrition</h1>
+          <p class="font-sans text-stone-600 text-text-preset-4">
+            The table below shows nutritional values per serving without the
+            additional fillings.
+          </p>
+          <table class="table-auto font-sans">
+            <tbody class="divide-y divide-stone-150">
+              <tr>
+                <td class="px-300 py-3">Calories</td>
+                <td
+                  class="px-300 py-3 text-brown-800 text-text-preset-4-bold font-bold"
+                >
+                  277kcal
+                </td>
+              </tr>
+              <tr>
+                <td class="px-300 py-3">Carbs</td>
+                <td
+                  class="px-300 py-3 text-brown-800 text-text-preset-4-bold font-bold"
+                >
+                  0g
+                </td>
+              </tr>
+              <tr>
+                <td class="px-300 py-3">Protein</td>
+                <td
+                  class="px-300 py-3 text-brown-800 text-text-preset-4-bold font-bold"
+                >
+                  20g
+                </td>
+              </tr>
+              <tr>
+                <td class="px-300 py-3">Fat</td>
+                <td
+                  class="px-300 py-3 text-brown-800 text-text-preset-4-bold font-bold"
+                >
+                  22g
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
